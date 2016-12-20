@@ -1,8 +1,10 @@
 from pkg_resources import iter_entry_points
 
 import click
+from click_plugins import with_plugins
 
 
+@with_plugins(iter_entry_points('tcli.plugins'))
 @click.group()
 def cli():
     """tcli is a modular command line tool wrapping and simplifying common
