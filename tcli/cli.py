@@ -2,7 +2,7 @@ from pkg_resources import iter_entry_points
 
 import click
 
-@with_plugins(iter_entry_points('tcli.plugins'))
+
 @click.group()
 def cli():
     """tcli is a modular command line tool wrapping and simplifying common
