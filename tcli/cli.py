@@ -21,7 +21,7 @@ def christmas():
 @click.argument('name')
 def greet(count, name):
     for x in range(count):
-        click.echo('Merry christmas %s!' % name)
+        click.echo('Merry Christmas %s!' % name)
 
 
 import tcli.utils
@@ -34,7 +34,7 @@ def add_exec_plugin(name, cmd):
     ))
     @click.argument('cmd_args', nargs=-1, type=click.UNPROCESSED)
     def exec_plugin(cmd_args):
-        """A tcli exec plugin."""
+        """Discovered exec module plugin."""
         cmdline = [cmd] + list(cmd_args)
         call(cmdline)
 
