@@ -1,0 +1,3 @@
+#!/bin/bash
+sha256="95ad93dc3ba8673410d919f44e86002659f5c157fc96f1afee4d44146069e189"
+docker run --rm -t "hashicorp/packer@sha256:$sha256" "$@"
