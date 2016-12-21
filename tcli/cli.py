@@ -24,7 +24,7 @@ def greet(count, name):
         click.echo('Merry christmas %s!' % name)
 
 
-import utils
+import tcli.utils
 from subprocess import call
 
 
@@ -40,5 +40,5 @@ def add_exec_plugin(name, cmd):
 
 
 FILTER="^%s-(.*)$" % __package__
-for name, cmd in utils.find_plugin_executables(FILTER):
+for name, cmd in tcli.utils.find_plugin_executables(FILTER):
     add_exec_plugin(name, cmd)
